@@ -1,0 +1,7 @@
+{ 
+    "title": "Glare user documentation",
+    "description" : "The official Glare documentation",
+    "styles": {
+        "website": "styles/website.css"
+    } 
+}
