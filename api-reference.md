@@ -2,6 +2,9 @@
 
 {% api-method method="command" path="workplane_exists" %}
 
+{% api-method-summary %}
+workplane_exists(wp_name)
+{% endapi-method-summary %}
 
 {% api-method-description %}
 It asks for a workplane name (a String) and will return true or false.
