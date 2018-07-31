@@ -1,6 +1,6 @@
 # API reference
 
-{% api-method method="get" path="workplane_exists" %}
+{% api-method method="command" path="workplane_exists" %}
 
 {% api-method-summary %}
 workplane_exists
