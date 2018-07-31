@@ -1,6 +1,6 @@
 # API reference
 
-{% api-method path="workplane_exists" %}
+{% api-method method="get" path="workplane_exists" %}
 
 {% api-method-summary %}
 workplane_exists
@@ -38,7 +38,7 @@ It asks for a workplane name (a String) and will return true or false.
             Cake successfully retrieved.
         {% endapi-method-response-example-description %}
 
-        ```lua
+        ```javascript
         {
             "name": "Cake's name",
             "recipe": "Cake's recipe name",
