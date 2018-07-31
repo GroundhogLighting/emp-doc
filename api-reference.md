@@ -53,15 +53,20 @@ It asks for a workplane name (a String) and will return true or false.
 {% endapi-method %}
 
 
+# Method group
 
 {% method -%}
-## Install {#install}
+## workplane_exist {#install}
 
-The first thing is to get the GitBook API client.
+Checks if a workplane exists in the model
 
 
-```bash
-$ npm install gitbook-api
+```lua
+if( workplane_exist(wp_name) ){
+    print("Workplane exists!")
+}else{
+    raise("Workplane does not exist")
+}
 ```
 
 {% endmethod %}
