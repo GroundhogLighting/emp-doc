@@ -41,13 +41,15 @@ It asks for a workplane name \(a String\) and will return true or false.
 Checks if a workplane exists in the model
 
 | **Parameter** | **Kind** | **Required** |
-| --- | --- |
+| --- | --- | --- |
+| Workplane name | String | TRUE |
+| --- | --- | --- |
 | Workplane name | String | TRUE |
 
 #### Example
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Example 1" %}
 ```lua
 wp_name = "my workplane"
 
@@ -59,18 +61,15 @@ if( workplane_exist(wp_name) ){
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Example 2" %}
+```lua
+wp_name2 = "my workplane"
 
+if( workplane_exist(wp_name2) ){
+    print("Workplane exists!")
+}else{
+    raise("Workplane does not exist")
+}
+```
 {% endtab %}
 {% endtabs %}
-
-```lua
-wp_name = "my workplane"
-
-if( workplane_exist(wp_name) ){
-    print("Workplane exists!")
-}else{
-    raise("Workplane does not exist")
-}
-```
-
