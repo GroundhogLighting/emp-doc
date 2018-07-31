@@ -8,7 +8,7 @@ It asks for a workplane name (a String) and will return true or false.
 {% endapi-method-description %}
 
 {% api-method-spec %}
-    {% api-method-params %}
+    {% api-method-request %}
         {% api-method-path-parameters %}
         {% api-method-parameter name="id" type="string" %}
         ID of the cake to get, for free of course.
@@ -26,7 +26,7 @@ It asks for a workplane name (a String) and will return true or false.
         {% endapi-method-parameter %}
         {% endapi-method-query-parameters %}
 
-    {% endapi-method-params %}
+    {% endapi-method-request %}
 
     {% api-method-response %}
         {% api-method-response-example  %}
