@@ -1,7 +1,7 @@
 
-## Method group
+# Method group
 
-### workplane\_exist {#install}
+## workplane\_exist {#install}
 
 Checks if a workplane exists in the model
 
@@ -10,7 +10,7 @@ Checks if a workplane exists in the model
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
 
-#### Example
+
 
 {% tabs %}
 {% tab title="Example 1" %}
