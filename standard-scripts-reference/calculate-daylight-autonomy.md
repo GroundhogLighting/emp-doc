@@ -1,35 +1,24 @@
+# Calculate daylight autonomy
 
-#  Calculate daylight autonomy
+### German Molina \|  November 4, 2017 \| version  1.0.0
 
+Calcualtes the Daylight Autonomy for one or more workplanes
 
-######  German Molina |  November 4, 2017 | version  1.0.0
-
- Calcualtes the Daylight Autonomy for one or more workplanes
-
-
-
-This script calculates the Daylight Autonomy. That is, percentage of 
-the workplane that maintains a minimum illuminance
+This script calculates the Daylight Autonomy. That is, percentage of the workplane that maintains a minimum illuminance
 
 This is another paragraph
 
-
-
-
-
 ## Inputs:
 
-1.  Expected lux -- required
-2.  Expected time -- required
-3.  Beggining of the occupied hours -- required
-4.  End of the occupied hours -- required
-5.  Workplanes to calculate -- required
-
+1. Expected lux -- required
+2. Expected time -- required
+3. Beggining of the occupied hours -- required
+4. End of the occupied hours -- required
+5. Workplanes to calculate -- required
 
 ## Source code:
 
 ```lua
-
 -- PARSE INPUTS
 -- ============
 min_lux = args[1]
@@ -50,7 +39,7 @@ for i=1,nwps do
     else
 
         wp_name = args[i+4]
-        
+
         add_task {
             name = "Daylight Autonomy";
             workplane = wp_name;
@@ -60,7 +49,5 @@ for i=1,nwps do
         }
     end
 end
-
-
 ```
 

@@ -1,33 +1,21 @@
+# Convergence test
 
-#  Convergence test
+### German Molina \|  November 2, 2017 \| version  1.0.0
 
+Tries to find the 'best' ambient parameters for solving your model
 
-######  German Molina |  November 2, 2017 | version  1.0.0
-
- Tries to find the 'best' ambient parameters for solving your model
-
-
-
-This scripts iterates trying to find the optimal parameters (i.e. those that 
-take as little time as possible in solving) by testing different combinations 
-of them
-
-
-
-
+This scripts iterates trying to find the optimal parameters \(i.e. those that take as little time as possible in solving\) by testing different combinations of them
 
 ## Inputs:
 
-1.  File with sensor points to perform test -- required
-2.  Number of randomly selected sensors to use for convergence test -- optional
-3.  Increase in Ambient Divisions (i.e. next AD will be arg3*AD) -- optional
-4.  Increase in Ambient Bounces (i.e. next AB will be AB + arg4) -- optional
-
+1. File with sensor points to perform test -- required
+2. Number of randomly selected sensors to use for convergence test -- optional
+3. Increase in Ambient Divisions \(i.e. next AD will be arg3\*AD\) -- optional
+4. Increase in Ambient Bounces \(i.e. next AB will be AB + arg4\) -- optional
 
 ## Source code:
 
 ```lua
-
 -- PARSE INPUTS
 -- ============
 sensor_file = arg1 or 0.2
@@ -103,6 +91,5 @@ end
 -- REPORT
 -- ======
 print_ray_trace_options()
-
 ```
 

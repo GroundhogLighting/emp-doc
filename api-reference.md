@@ -1,156 +1,68 @@
+# API reference
+
+{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
+{% api-method-summary %}
+Get Cakes
+{% endapi-method-summary %}
+
+{% api-method-description %}
+This endpoint allows you to get free cakes.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" %}
+ID of the cake to get, for free of course.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
+Authentication token to track down who is emptying our stocks.
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="recipe" type="string" %}
+The API will do its best to find a cake matching the provided recipe.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="gluten" type="boolean" %}
+Whether the cake should be gluten-free or not.
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Cake successfully retrieved.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "name": "Cake's name",
+    "recipe": "Cake's recipe name",
+    "cake": "Binary cake"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+Could not find a cake matching this query.
+{% endapi-method-response-example-description %}
+
+```javascript
+{
+    "message": "Ain't no cake like that."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
-# Glare's API reference manual
 
-All the functions in Glare's API
-## Index
 
-
-### Utilities 
-
-- raise
-- warn
-
-
-### Retrieve data functions 	
-
-- workplane_exist
-- get_workplanes_list
-
-
-### Add task functions 
-
-- calc_DF
-
-
-### Solve function 
-
-- solve
-
-
-### Export functions 
-
-- write_radiance_dir
-
-
-### Set-options functions 
-
-- print_ray_trace_options
-- ray_trace_options
-
-
----
-
-## Functions
-
-
-### Utilities 
-
-
-#### raise()
-
-
-**Arguments**
-
-
-**Return**
-
-none
-
-#### warn()
-
-
-**Arguments**
-
-
-**Return**
-
-none
-
-### Retrieve data functions 	
-
-
-#### workplane_exist(1)
-
-Checks if a workplane does exist in the model
-
-**Arguments**
-
-- The name of the workplane | required
-
-**Return**
-
-- True or False
-
-#### get_workplanes_list()
-
-Retrieves an array with the workplanes names in the model
-
-**Arguments**
-
-
-**Return**
-
-- An array with the workplanes names
-
-### Add task functions 
-
-
-#### calc_DF()
-
-
-**Arguments**
-
-
-**Return**
-
-none
-
-### Solve function 
-
-
-#### solve()
-
-Solves the task manager before finishing the script	
-
-**Arguments**
-
-
-**Return**
-
-none
-
-### Export functions 
-
-
-#### write_radiance_dir()
-
-
-**Arguments**
-
-
-**Return**
-
-none
-
-### Set-options functions 
-
-
-#### print_ray_trace_options()
-
-
-**Arguments**
-
-
-**Return**
-
-none
-
-#### ray_trace_options()
-
-
-**Arguments**
-
-
-**Return**
-
-none

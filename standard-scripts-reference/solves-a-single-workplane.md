@@ -1,28 +1,17 @@
+# Solves a single workplane
 
-#  Solves a single workplane
+### German Molina \|  November 2, 2017 \| version  1.0.0
 
-
-######  German Molina |  November 2, 2017 | version  1.0.0
-
- This script solves all the objectives in the model that correspond to a single workplane
-
-
-
-
-
-
-
+This script solves all the objectives in the model that correspond to a single workplane
 
 ## Inputs:
 
-1.  The workplane name -- required
-2.  A file with options -- optional
-
+1. The workplane name -- required
+2. A file with options -- optional
 
 ## Source code:
 
 ```lua
-
 -- PARSE INPUTS
 -- ============
 
@@ -57,6 +46,5 @@ tasks = get_tasks_by_workplane(arg1)
 for i=1,#tasks do
     task_manager.add(tasks[i])
 end
-
 ```
 
