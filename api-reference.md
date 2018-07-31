@@ -1,9 +1,9 @@
 # API reference
 
-{% api-method method="command" path="workplane_exists" %}
+{% api-method method="command" path="workplane_exists(wp_name)" %}
 
 {% api-method-summary %}
-workplane_exists(wp_name)
+workplane_exists
 {% endapi-method-summary %}
 
 {% api-method-description %}
