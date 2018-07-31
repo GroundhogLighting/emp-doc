@@ -1,6 +1,6 @@
 { 
-    "title": "Glare user documentation",
-    "description" : "The official Glare documentation",
+    "title": "Emp user documentation",
+    "description" : "The official Emp documentation",
     "styles": {
         "website": "styles/website.css"
     } 
