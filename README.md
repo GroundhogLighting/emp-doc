@@ -1,7 +1,3 @@
----
-description: Documentation for the Emp lighting calculation engine
----
-
 # Home
 
 ## Getting Super Powers
