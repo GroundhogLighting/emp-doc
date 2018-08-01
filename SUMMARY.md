@@ -2,7 +2,7 @@
 
 * [Home](README.md)
 * [What is Emp](what-is-emp.md)
-* [Configuration](configuration.md)
+* [Installation and configuration](configuration.md)
 * [Quick start: understanding Emp](quick-start-understanding-emp.md)
 * [Lua for Emp users](lua-for-emp-users.md)
 * [API reference](api-reference.md)

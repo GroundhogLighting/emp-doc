@@ -1,8 +1,8 @@
+# API reference
 
-# Method group 1
+## Method group 1
 
-
-## another_method 
+### another\_method
 
 Checks if a workplane exists in the model
 
@@ -10,8 +10,6 @@ Checks if a workplane exists in the model
 | --- | --- | --- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
-
-
 
 {% tabs %}
 {% tab title="Example 1" %}
@@ -39,10 +37,9 @@ if( workplane_exist(wp_name2) ){
 {% endtab %}
 {% endtabs %}
 
-# Method group
+## Method group
 
-
-## workplane\_exist 
+### workplane\_exist
 
 Checks if a workplane exists in the model
 
@@ -50,8 +47,6 @@ Checks if a workplane exists in the model
 | --- | --- | --- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
-
-
 
 {% tabs %}
 {% tab title="Example 1" %}
@@ -79,8 +74,7 @@ if( workplane_exist(wp_name2) ){
 {% endtab %}
 {% endtabs %}
 
-
-## workplane\_exist 
+### workplane\_exist
 
 Checks if a workplane exists in the model
 
@@ -88,8 +82,6 @@ Checks if a workplane exists in the model
 | --- | --- | --- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
-
-
 
 {% tabs %}
 {% tab title="Example 1" %}
@@ -116,3 +108,4 @@ if( workplane_exist(wp_name2) ){
 ```
 {% endtab %}
 {% endtabs %}
+
