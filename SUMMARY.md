@@ -5,6 +5,8 @@
 * [Installation and configuration](configuration.md)
 * [Quick start: understanding Emp](quick-start-understanding-emp.md)
 * [Lua for Emp users](lua-for-emp-users.md)
+* [Lighting simulation with Emp](lighting-simulation-with-emp/README.md)
+  * [Basic script structure](lighting-simulation-with-emp/hello-world.md)
 * [API reference](api-reference.md)
 * [Standard scripts reference](standard-scripts-reference/README.md)
   * [Calculate daylight autonomy](standard-scripts-reference/calculate-daylight-autonomy.md)
