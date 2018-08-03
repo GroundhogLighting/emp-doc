@@ -1,23 +1,8 @@
 # Home
 
-## Getting Super Powers
+Hello, and welcome to the Emp documentation. 
 
-Becoming a super hero is a fairly straight forward process:
+This document intends to help you understand what is Emp, how to use it, and how to understand it as well as possible. However, this is not a book, but a gitbook. That means that **you can help keep the documentation up to date, clean, and complete.** This sort of help is as useful as programming, so please do that.
 
-```
-$ give me super-powers
-```
-
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
+Thanks for your interest! I hope Emp is useful to you.
 
