@@ -7,7 +7,7 @@
 Checks if a workplane exists in the model
 
 | **Parameter** | **Kind** | **Required** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
 
@@ -44,7 +44,7 @@ if( workplane_exist(wp_name2) ){
 Checks if a workplane exists in the model
 
 | **Parameter** | **Kind** | **Required** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
 
@@ -79,7 +79,7 @@ if( workplane_exist(wp_name2) ){
 Checks if a workplane exists in the model
 
 | **Parameter** | **Kind** | **Required** |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Workplane name | String | TRUE |
 | Another param | Table | FALSE |
 
