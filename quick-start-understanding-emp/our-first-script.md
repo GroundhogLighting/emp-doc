@@ -6,7 +6,7 @@
 
 ## Writing our first script
 
-The first thing you should do is to open a text editor, and create a new file called `hello.lua` . In that file write the following
+The first thing you should do is to open a text editor, and create a new file called `emp101.lua`. In that file write the following
 
 ```lua
 print("This is my first message")
@@ -23,7 +23,7 @@ Now, we can run this simple script to see what happens.
 ```bash
 # Notice that the ./ is required 
 # for scripts that are not in the EMPFILE
-emp - ./hello 
+emp - ./emp101 
 ```
 
 And the output is

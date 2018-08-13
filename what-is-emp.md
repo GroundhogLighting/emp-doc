@@ -4,11 +4,13 @@
 
 I like to say that, at least today, Emp is
 
-> a __scriptable and higher [Radiance](https://www.radiance-online.org/)-based lighting calculation engine that can process in parallel as well as handle several pre and post processing tasks... and that can also read some 3D model formats.
+> a __scriptable and higher [Radiance](https://www.radiance-online.org/)-based lighting calculation engine that can process things in parallel as well as handle several pre and post processing tasks... and that can also read some 3D model formats.
+
+I know that definition is somehow sketchy, but it works... Emp is designed to allow you to use Radiance in a simpler and faster way \(i.e. being more productive\) without taking too much flexibilty.
 
 ### What is Radiance
 
-It is highly possible that such defintion does not mean anything to you, and that is OK. For understanding it, you need to know what is [Radiance](https://www.radiance-online.org/), and hopefuly tried to use it. According to Radiance's [about](https://www.radiance-online.org/about) page:
+It is highly possible that the previous Emp defintion does not mean anything to you, and that is OK. For understanding it, you need to know what is [Radiance](https://www.radiance-online.org/), and hopefuly tried to use it. According to Radiance's [about](https://www.radiance-online.org/about) page:
 
 > Radiance is a **suite of programs** for the analysis and visualization of lighting in design.
 >
