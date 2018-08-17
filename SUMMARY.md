@@ -6,7 +6,7 @@
 * [Quick start: understanding Emp](quick-start-understanding-emp/README.md)
   * [Emp architecture](quick-start-understanding-emp/emp-architecture.md)
   * [Our first script](quick-start-understanding-emp/our-first-script.md)
-  * [Stdin and Stderr](quick-start-understanding-emp/stdin-and-stderr.md)
+  * [Stdout and Stderr](quick-start-understanding-emp/stdin-and-stderr.md)
 * [Lua for Emp users](lua-for-emp-users/README.md)
   * [Values and types](lua-for-emp-users/values-and-types.md)
   * [Basic syntax and keywords](lua-for-emp-users/basic-syntax-and-keywords.md)

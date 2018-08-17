@@ -2,7 +2,7 @@
 
 ## Introduction
 
-
+In this tutorial we will be the first introduction to scripts in Emp. Our script will not really do anything but displaying a message in the screen. However, you will learn a bit about how Emp works internally.
 
 ## Writing our first script
 
@@ -39,7 +39,7 @@ Yes, there is a warning... however, we got the result we wanted! That is, the co
 
 What the warning is saying is that the Task Manager has no tasks. There are two obvious ways of solving this.
 
-1. Pushing tasks to the Task Manager \(e.g. ask Emp to calculate something\)
+1. Pushing tasks to the Task Manager \(i.e. ask Emp to calculate something\)
 2. Tell Emp that this script does not intend to perform calculations. That can be done by including `auto_solve = false` somewhere in the script.
 
 So, our script would become
@@ -56,4 +56,8 @@ This is my first message
 ```
 
 ## Conclusions
+
+As mentioned in the [Emp architecture](https://groundhoglighting.gitbook.io/emp-doc/~/edit/drafts/-LK8bglexfioPr1D-jRv/quick-start-understanding-emp/emp-architecture) section, every Emp execution has two object: the Emp Model and the Task Manager. By default, the Task Manager will try to solve all the tasks that you have provided, and will warn you if you did not provide any.
+
+This warning can be avoided by using the `auto_solve=false` option.
 
