@@ -15,14 +15,15 @@ There are [eight types](https://www.lua.org/manual/5.3/manual.html#3.3.4) in the
 | function | _... we will talk about this later_ |
 | table | { 1 = 2.1,    2= "john",    3 = false } |
 
-Lua belongs to the family of "dynamically typed" programming languages. That means that a variable can change its type within the script. Lets see an example of types being used.
+### Error due to type mismatch
 
-### Values and types example 1
+As mentioned before, every variable in a Lua script has a type. When you try to perform math or other operations, these values need to 'make sense'.
+
+Lets see the script below, in which we are trying to add a number to a string.
 
 ```lua
--- Any code after the '--' operator will not be run... 
--- so lets use that for providing explanation
-
+-- type_error.lua
+-- =============
 
 -- Tell Emp that we do not intend to solve anything
 auto_solve = false 
@@ -36,12 +37,21 @@ v2 = "Hello"    -- v2 has type string
 print(v1 + v2) 
 ```
 
-### Values and types example 2
+The execution returns
+
+```text
+type_error.lua:13: attempt to add a 'number' with a 'string'
+```
+
+Even more, it is telling us that the error is in line 13.
+
+### Changing the type of a variable
+
+Lua belongs to a family of programming languages called 'dynamically typed' languages. This means that the type of a variable can change during the execution of the language. Lets use this concept to fix the previous example.
 
 ```lua
--- Any code after the '--' operator will not be run... 
--- so lets use that for providing explanation
-
+-- change_type.lua
+-- =============
 
 -- Tell Emp that we do not intend to solve anything
 auto_solve = false 
@@ -58,11 +68,22 @@ v2 = 3
 print(v1 + v2) 
 ```
 
-## Type nil
+And now, when you run it you get:
+
+```text
+4
+```
+
+Which is what we were expecting... is not it?
+
+## Nil
 
 The type nil can only hold a single value: 'nil', which represents abscence of data. This value is characterized by not being of any other value.
 
 ```lua
+-- nil.lua
+-- =======
+
 -- Tell Emp that we do not intend to solve anything
 auto_solve = false 
 
@@ -70,27 +91,178 @@ auto_solve = false
 print(v)
 ```
 
-As you see when we run this script, the program prints the value 'nil' to the standard out. This is because v2 is a variable that has not been assigned any value \(i.e. it does not exist, basically\).
+As you see when we run this script, the program prints the value 'nil' to the standard out. This is because v2 is a variable that has not been assigned any value \(i.e. it basically does not exist\).
 
 ## Boolean
 
 The type boolean can only contain two values: TRUE or FALSE. It is a pretty straightforward type, used for comparisons and other things.
 
 ```lua
+-- boolean.lua
+-- ===========
+
 -- Tell Emp that we do not intend to solve anything
 auto_solve = false 
 
 -- Asign the value of 1
-v = 1
+is_true = true
 
--- Lets see if v is equal to 1
-print(v == 1)
-
--- Lets see if v is equal to 2
-print(v == 2)
+print(is_true)
 ```
 
 ## Number
 
 The type number contains any kind of real numbers, regardless if they are integers or not.
+
+```lua
+-- number.lua
+-- ==========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false
+
+-- Lets define two variables of type number
+v1 = 2
+v2 = 3
+
+-- Lets define a third one that depends on the other two
+v3 = v1/v2 -- this means, v3 is equal to v1 divided by v2
+
+-- Lets check the result
+print(v3)
+```
+
+## String
+
+Strings represents 'chains of characters', known by most people as text
+
+```lua
+-- string.lua
+-- ==========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false
+
+-- Lets define two strings
+v1 = 'Hello'
+v2 = 'Hola'
+
+-- Lets use them for something
+
+-- This puts them together (i.e. concatenate them)
+v3 = v1..v2
+print(v3)
+
+-- But that is not very explanatory to the user. Try this:
+print(v1.." in spanish is "..v2)
+```
+
+## Function
+
+Functions help writing code once and reusing it as many times as needed. However, we do not want functions to always do the exact same thing, but to change their behavior a bit. We can do that by providing arguments \(i.e. inputs\).
+
+Even more, it is very likely that you want to use the results of a function for something else. In order to do this, functions can return values. See the example below.
+
+```lua
+-- function.lua
+-- ============
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- Define a function that greets someone.
+-- The someone it greets will be passed as an argument
+function greet(name)
+    print("Hello, "..name)
+end
+
+greet("Ringo")
+greet("Paul")
+greet("George")
+greet("John")
+
+-- Define a function that receives a number
+-- and returns the number squared
+function square(number)
+    return number * number
+end
+
+v = 2
+v2 = square(v)
+
+print(v.." squared is "..v2) 
+```
+
+{% hint style="info" %}
+Did you notice that we concatenated numbers with strings in the last line?
+{% endhint %}
+
+{% hint style="info" %}
+While the concept of function is present in most programming languages, not all of them consider them to be a type. This allows passing functions as arguments to other function, which can be confusing but useful.
+{% endhint %}
+
+## Table
+
+Tables are a very important type in Lua, and are the only way of structuring data. They are associative arrays than behave as dictionaries, objects or other types used in other programming languages. Lets have a look at that using examples.
+
+```lua
+-- table.lua
+-- ============
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- Lets create an array (i.e. a chain of values).
+-- Note that these values do not need be of the same 
+-- type
+array = {1,2,3, "hello"}
+
+-- Lets print this array
+inspect(array) -- 'inspect' is an Emp function, not a Lua one.
+
+-- Lets print the last item (Note that arrays start indexing at 1)
+print("The last item in 'array' is "..array[4])
+
+
+-- Lets create a simple object
+-- ===========================
+simple_object = {
+    name = "John",
+    lastname = "Doe"    
+}
+
+inspect(simple_object)
+
+-- print the data
+print("The lastname of "..simple_object["name"].. " is "..simple_object["lastname"])
+
+-- Or we can also do
+print("The lastname of "..simple_object.name.. " is "..simple_object.lastname)
+
+
+
+-- Lets create a more complex object
+-- =================================
+pink_floyd = {
+    members = {
+        { name = "David", lastname="Gilmour"},
+        { name = "Nick", lastname="Mason"},
+        { name = "Roger", lastname="Waters"},
+        { name = "Richard", lastname="Wright"},
+        { name = "Syd", lastname="Barret"},
+    },
+    description = "This is an awesome band!",
+    greet = function()
+       print("Hello, we are Pink Floyd") 
+    end
+}
+
+-- Inspect the object
+inspect(pink_floyd)
+
+-- Call the function embedded in the object
+pink_floyd.greet()
+```
+
+
 

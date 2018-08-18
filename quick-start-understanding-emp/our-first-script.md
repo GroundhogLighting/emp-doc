@@ -9,6 +9,9 @@ In this tutorial we will be the first introduction to scripts in Emp. Our script
 The first thing you should do is to open a text editor, and create a new file called `emp101.lua`. In that file write the following
 
 ```lua
+-- emp101.lua
+-- ==========
+
 print("This is my first message")
 ```
 
@@ -45,7 +48,12 @@ What the warning is saying is that the Task Manager has no tasks. There are two 
 So, our script would become
 
 ```lua
-auto_solve = false
+-- emp101.lua
+-- ==========
+
+-- Tell Emp that we will not solve any tasks.
+auto_solve = false 
+
 print("This is my first message")
 ```
 

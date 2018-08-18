@@ -8,10 +8,10 @@ If you do not want to loose your work, you will want to put your results into on
 
 Maybe the easiest way to understand what the stderr and stdout is by showing an example of how to print to them from an Emp script.
 
-Emp provides two functions for warning and raising errors; and Lua comes with a built-in function for printing to the stdout. See, for example, the script below:
+Emp provides one function for warning, and Lua comes with a built-in function for printing to the stdout and one for raising an error. See, for example, the script below:
 
 ```lua
--- This is stdout_stderr.lua 
+-- stdout_stderr.lua 
 -- =========================
 
 -- Tell Emp we do not want to solve any tasks
@@ -29,7 +29,7 @@ print("Not that useless, though... you are learning about stderr and stdout")
 -- This function should be used when something wrong 
 -- happened, and the script will stop running. An error
 -- message is printed to the console before closing everything.
-raise("I can't stand it... I wont execute further lines of this script because it is useless")
+error("I can't stand it... I wont execute further lines of this script because it is useless")
 
 -- This would also be expected output. However, since
 -- there was an error raised before this, the execution
@@ -52,10 +52,14 @@ You get
 ```text
 Warning from Line 9: Are you aware that this script is completely useless?
 Congratulations! You are learning about stdout and stderr!
-'Internal error' error in line 19: I can't stand it... I wont execute further lines of this script because it is useless
+stdout_stderr.lua:19: I can't stand it... I wont execute further lines of this script because it is useless
 ```
 
 As you can see, the results and errors and warnings are all together. The next section of this tutorial explains how to separate these.
+
+{% hint style="info" %}
+Note that errors and warnings often show the line of the script in which the error is caused.
+{% endhint %}
 
 ## Directing the stdout to a file
 
