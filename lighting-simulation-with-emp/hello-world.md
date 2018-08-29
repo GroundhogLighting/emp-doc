@@ -1,7 +1,3 @@
----
-description: Lets write our first Emp script
----
-
 # Passing arguments to scripts
 
 ## Introduction

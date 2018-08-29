@@ -264,5 +264,9 @@ inspect(pink_floyd)
 pink_floyd.greet()
 ```
 
+{% hint style="info" %}
+Did you notice that the function 'greet' is in the table? We actually call it in the last line! To 'call' a function is to execute its code. This is done by using the '\(\)' at the end.
+{% endhint %}
+
 
 
