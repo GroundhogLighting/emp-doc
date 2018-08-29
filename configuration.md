@@ -1,4 +1,4 @@
-# Configuration
+# Installation and configuration
 
 ## Environmental variables
 
