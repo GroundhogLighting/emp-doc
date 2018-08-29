@@ -1,49 +1,22 @@
 
-# OTHER
-
-
-## review
-
-Calls RVU program
-
-
-### Parameters
-
-*This function receives no parameters*
-
-### Returns
-
-*This function returns nothing*
-
-{% tabs %}
-{% tab title='Example 1' %}
-```lua
-review()
-```
-{% endtab %}
-{% endtabs %}
-
-
 # TASK MANAGER
 
 
-## solve
+## solve_tasks
 
 Solves the task manager
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-solve()
+solve_tasks()
 ```
 {% endtab %}
 {% endtabs %}
@@ -53,12 +26,10 @@ solve()
 
 Prints the current task flow to the standard output
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -75,12 +46,10 @@ print_task_flow()
 
 Removes all tasks from the Task Manager
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -100,14 +69,12 @@ purge_tasks()
 
 Prints a warning to the standard error, but continues processing the     script
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | message  | The message to warn | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -124,14 +91,12 @@ warn(message)
 
 Prints a certain value to the standard output
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | value  | The value to print | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -151,12 +116,10 @@ inspect(value)
 
 Retrieves an array with the workplanes names in the model
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -175,12 +138,10 @@ workplanes  = get_workplanes_list()
 
 Retrieves a table with the workplane information in the model.     That is, name, maximum size of pixel (triangulation), tasks, etc.
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -199,14 +160,12 @@ workplanes  = get_workplanes_data()
 
 Checks if a workplane does exists in the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | workplane_name  | The name of the workplane | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -225,14 +184,12 @@ exist  = is_workplane(workplane_name)
 
 Counts the number of polygons in a workplane
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | workplane_name  | The name of the workplane | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -251,14 +208,12 @@ n_polygons  = count_workplane_polygons(workplane_name)
 
 Creates a new Workplane
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | workplane_name  | The name of the workplane | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -275,12 +230,10 @@ workplane(workplane_name)
 
 Retrieves an array with the metrics
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -299,14 +252,12 @@ metrics  = get_metrics()
 
 Retrieves a single metric
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the metric to retrieve | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -325,12 +276,10 @@ a_metric  = get_metric(name)
 
 Retrieves an array with the layer names in the model
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -349,14 +298,12 @@ layer_names  = get_layers_list()
 
 Checks if a layer does exist in the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | layer_name  | The name of the workplane | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -375,14 +322,12 @@ exist  = is_layer(layer_name)
 
 Counts the number of objects in a layer
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | layer_name  | The name of the layer | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -401,14 +346,12 @@ count  = count_layer_objects(layer_name)
 
 Counts the number of ComponentInstances in a layer
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | layer_name  | The name of the layer | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -427,12 +370,10 @@ count  = count_layer_instances(layer_name)
 
 Retrieves an array with the ComponentDefinition names in the model
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -451,14 +392,12 @@ definitions  = get_component_definitions_list()
 
 Checks if a ComponentDefinition does exist in the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the ComponentDefinition | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -477,14 +416,12 @@ exist  = is_component_definition(name)
 
 Adds a Component Definition to the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the ComponentDefinition | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -503,14 +440,12 @@ a_component  = component(name)
 
 Counts the number of objects in a ComponentDefinition
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the ComponentDefinition | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -529,14 +464,12 @@ count  = count_component_definition_objects(name)
 
 Counts the number of ComponentInstances in a ComponentDefinition
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the ComponentDefinition | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -555,12 +488,10 @@ count  = count_component_definition_instances(name)
 
 Retrieves a table with the location of the model, containing: latitude, longitude,     time_zone, city, country, albedo and elevation fields.
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -579,12 +510,10 @@ location  = get_location_data()
 
 Retrieves a list of all the material names in the model
 
-
-### Parameters
+**Parameters**
 
 *This function receives no parameters*
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -603,14 +532,12 @@ materials  = get_materials_list()
 
 Checks if a material exists in the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the material | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -629,14 +556,12 @@ is_material  = is_material(name)
 
 Gets the class of a certain material
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the material | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -655,14 +580,12 @@ mat_class  = get_material_class(name)
 
 Checks if an object exists in the model
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the object | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -681,14 +604,12 @@ is_object  = is_object(name)
 
 Gets the class of a certain object
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the material | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -707,14 +628,12 @@ obj_class  = get_object_class(name)
 
 Adds a new Layer object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | name  | The name of the layer | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -733,14 +652,12 @@ layer  = layer(name)
 
 Adds a new Bubble object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -759,14 +676,12 @@ a_bubble  = bubble(data)
 
 Adds a new Cone object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -785,14 +700,12 @@ a_cone  = cone(data)
 
 Adds a new Cup object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -811,14 +724,12 @@ a_cup  = cup(data)
 
 Adds a new Cylinder object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -837,14 +748,12 @@ a_cylinder  = cylinder(data)
 
 Adds a new Polygon object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -863,14 +772,12 @@ a_polygon  = polygon(data)
 
 Adds a new Ring object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -889,14 +796,12 @@ a_ring  = ring(data)
 
 Adds a new Source object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -915,14 +820,12 @@ a_source  = source(data)
 
 Adds a new Sphere object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -941,14 +844,12 @@ a_sphere  = sphere(data)
 
 Adds a new Tube object to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -967,14 +868,12 @@ a_tube  = tube(data)
 
 Adds a new Dielectric material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -993,14 +892,12 @@ a_dielectric  = dielectric(data)
 
 Adds a new Glass material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1019,14 +916,12 @@ a_glass  = glass(data)
 
 Adds a new Glow material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1045,14 +940,12 @@ a_glow  = glow(data)
 
 Adds a new Interface material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1071,14 +964,12 @@ an_interface  = interface(data)
 
 Adds a new Light material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1097,14 +988,12 @@ a_light  = light(data)
 
 Adds a new Metal material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1123,14 +1012,12 @@ a_metal  = metal(data)
 
 Adds a new Plastic material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1149,14 +1036,12 @@ a_plastic  = plastic(data)
 
 Adds a new Spotlight material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1175,14 +1060,12 @@ a_spotlight  = spotlight(data)
 
 Adds a new Trans material to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1201,14 +1084,12 @@ a_trans  = trans(data)
 
 Adds a new View to the EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1227,14 +1108,12 @@ view  = view(data)
 
 Returns a list of the views' names
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1253,14 +1132,12 @@ views  = get_views_list(data)
 
 Returns a list of the views' names
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 | **Return** | **Description** |
 | --- | --- |
@@ -1279,14 +1156,12 @@ is_a_view  = is_view(data)
 
 Returns a list of the views' names
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1303,14 +1178,12 @@ box(data)
 
 Creates a new ComponentInstancex
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1330,14 +1203,12 @@ instance(data)
 
 Modifies the ray-tracing options in the current EmpModel
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | options  | A Table with the ray-tracing options to set | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1354,14 +1225,12 @@ ray_trace_options(options)
 
 Prints the current ray-trace opcions. If a file is given, the options     will be printed to such file. If not, the options will be printed     to the Standard Output.
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | file  | The name of the file to write | FALSE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1381,15 +1250,13 @@ print_ray_trace_options(file)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1406,15 +1273,13 @@ write_scene_file(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1431,15 +1296,13 @@ write_model_info(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1456,15 +1319,13 @@ write_rif_file(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1481,15 +1342,13 @@ write_components(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1506,15 +1365,13 @@ write_views(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1531,15 +1388,13 @@ write_current_sky(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1556,15 +1411,13 @@ write_current_weather(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1581,15 +1434,13 @@ write_materials(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1606,15 +1457,13 @@ write_layers(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1631,15 +1480,13 @@ write_photosensors(task_name, options)
 
 Adds a task to the task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1659,15 +1506,13 @@ write_workplane(task_name, options)
 
 Pushes a Calculate Workplane Illuminance task to the     task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1684,15 +1529,13 @@ workplane_illuminance(task_name, options)
 
 Pushes a Calculate Workplane Daylight Factor task to the     task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1709,15 +1552,13 @@ workplane_df(task_name, options)
 
 Pushes a Calculate Workplane Useful Daylight Illuminance task to the     task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1734,15 +1575,13 @@ workplane_udi(task_name, options)
 
 Pushes a Calculate Workplane Daylight Autonomy task to the     task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1759,15 +1598,13 @@ workplane_da(task_name, options)
 
 Pushes a Calculate Workplane Annual Sunlight Exposure task to the     task manager
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1784,15 +1621,13 @@ workplane_ase(task_name, options)
 
 Pushes a generic Workplane metric to the Task Manager. This is an     alternative method to workplane_ase, workplane_da, etc.
 
-
-### Parameters
+**Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | task_name  | The name of the task to add | TRUE | 
 | options  | The options given | TRUE | 
-
-### Returns
+**Returns**
 
 *This function returns nothing*
 
@@ -1800,6 +1635,29 @@ Pushes a generic Workplane metric to the Task Manager. This is an     alternativ
 {% tab title='Example 1' %}
 ```lua
 push_metric(task_name, options)
+```
+{% endtab %}
+{% endtabs %}
+
+
+# OTHER
+
+
+## review
+
+Calls RVU program
+
+**Parameters**
+
+*This function receives no parameters*
+**Returns**
+
+*This function returns nothing*
+
+{% tabs %}
+{% tab title='Example 1' %}
+```lua
+review()
 ```
 {% endtab %}
 {% endtabs %}
