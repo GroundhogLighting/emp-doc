@@ -1,20 +1,12 @@
-# API reference
 
-<<<<<<< HEAD
 ## review
 
 Calls RVU program
 
 **No Parameters**
-=======
-## Method group 1
-
-### another\_method
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 ## solve
 
-<<<<<<< HEAD
 Solves the task manager
 
 **No Parameters**
@@ -322,17 +314,6 @@ Adds a new Interface material to the EmpModel
 | data  | The table with the data | REQUIRED
 
 ## light
-=======
-| **Parameter** | **Kind** | **Required** |
-| :--- | :--- | :--- |
-| Workplane name | String | TRUE |
-| Another param | Table | FALSE |
-
-{% tabs %}
-{% tab title="Example 1" %}
-```lua
-wp_name = "my workplane"
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 Adds a new Light material to the EmpModel
 
@@ -374,7 +355,6 @@ Adds a new Trans material to the EmpModel
 
 ## view
 
-<<<<<<< HEAD
 Adds a new View to the EmpModel
 
 | **Name** | **Parameter** | **Required** |
@@ -382,15 +362,9 @@ Adds a new View to the EmpModel
 | data  | The table with the data | REQUIRED
 
 ## get_views_list
-=======
-## Method group
-
-### workplane\_exist
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 Returns a list of the views' names
 
-<<<<<<< HEAD
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | REQUIRED
@@ -406,17 +380,6 @@ Returns a list of the views' names
 ## box
 
 Returns a list of the views' names
-=======
-| **Parameter** | **Kind** | **Required** |
-| :--- | :--- | :--- |
-| Workplane name | String | TRUE |
-| Another param | Table | FALSE |
-
-{% tabs %}
-{% tab title="Example 1" %}
-```lua
-wp_name = "my workplane"
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
@@ -426,19 +389,14 @@ wp_name = "my workplane"
 
 Creates a new ComponentInstancex
 
-<<<<<<< HEAD
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | data  | The table with the data | REQUIRED
 
 ## ray_trace_options
-=======
-### workplane\_exist
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 Modifies the ray-tracing options in the current EmpModel
 
-<<<<<<< HEAD
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
 | options  | A Table with the ray-tracing options to set | REQUIRED
@@ -452,17 +410,6 @@ Prints the current ray-trace opcions. If a file is given, the options     will b
 | file  | The name of the file to write | OPTIONAL
 
 ## write_scene_file
-=======
-| **Parameter** | **Kind** | **Required** |
-| :--- | :--- | :--- |
-| Workplane name | String | TRUE |
-| Another param | Table | FALSE |
-
-{% tabs %}
-{% tab title="Example 1" %}
-```lua
-wp_name = "my workplane"
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
 
 Adds a task to the task manager
 
@@ -480,7 +427,6 @@ Adds a task to the task manager
 | task_name  | The name of the task to add | REQUIRED
 | options  | The options given | REQUIRED
 
-<<<<<<< HEAD
 ## write_rif_file
 
 Adds a task to the task manager
@@ -615,14 +561,3 @@ Pushes a generic Workplane metric to the Task Manager. This is an     alternativ
 | --- | --- | --- |
 | task_name  | The name of the task to add | REQUIRED
 | options  | The options given | REQUIRED
-=======
-if( workplane_exist(wp_name2) ){
-    print("Workplane exists!")
-}else{
-    raise("Workplane does not exist")
-}
-```
-{% endtab %}
-{% endtabs %}
-
->>>>>>> df97bee7c7c6837fc50e98ea3fbfd4d925dd182f
