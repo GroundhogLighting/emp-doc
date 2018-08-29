@@ -1,4 +1,7 @@
 
+# OTHER
+
+
 ## review
 
 Calls RVU program
@@ -19,6 +22,9 @@ review()
 ```
 {% endtab %}
 {% endtabs %}
+
+
+# TASK MANAGER
 
 
 ## solve
@@ -87,6 +93,9 @@ purge_tasks()
 {% endtabs %}
 
 
+# INPUT / OUTPUT
+
+
 ## warn
 
 Prints a warning to the standard error, but continues processing the     script
@@ -135,6 +144,9 @@ inspect(value)
 {% endtabs %}
 
 
+# GROUNDHOG MODEL DATA
+
+
 ## get_workplanes_list
 
 Retrieves an array with the workplanes names in the model
@@ -148,12 +160,12 @@ Retrieves an array with the workplanes names in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| workplane_array  | An array with the workplanes names | 
+| workplanes  | An array with the workplanes names | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-workplane_array  = get_workplanes_list()
+workplanes  = get_workplanes_list()
 ```
 {% endtab %}
 {% endtabs %}
@@ -172,12 +184,12 @@ Retrieves a table with the workplane information in the model.     That is, name
 
 | **Return** | **Description** |
 | --- | --- |
-| workplane_array  | An array with the workplanes names | 
+| workplanes  | An array with the workplanes names | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-workplane_array  = get_workplanes_data()
+workplanes  = get_workplanes_data()
 ```
 {% endtab %}
 {% endtabs %}
@@ -198,12 +210,12 @@ Checks if a workplane does exists in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| exist?  | True or False | 
+| exist  | True or False | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-exist?  = is_workplane(workplane_name)
+exist  = is_workplane(workplane_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -224,12 +236,12 @@ Counts the number of polygons in a workplane
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | number of polygons | 
+| n_polygons  | The number of polygons | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = count_workplane_polygons(workplane_name)
+n_polygons  = count_workplane_polygons(workplane_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -248,14 +260,12 @@ Creates a new Workplane
 
 ### Returns
 
-| **Return** | **Description** |
-| --- | --- |
-| The  | number of polygons | 
+*This function returns nothing*
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = workplane(workplane_name)
+workplane(workplane_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -274,12 +284,12 @@ Retrieves an array with the metrics
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | metrics | 
+| metrics  | The metrics | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = get_metrics()
+metrics  = get_metrics()
 ```
 {% endtab %}
 {% endtabs %}
@@ -300,12 +310,12 @@ Retrieves a single metric
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | metrics | 
+| a_metric  | The metric | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = get_metric(name)
+a_metric  = get_metric(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -324,12 +334,12 @@ Retrieves an array with the layer names in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| workplane_array  | An array with the layer names | 
+| layer_names  | An array with the layer names | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-workplane_array  = get_layers_list()
+layer_names  = get_layers_list()
 ```
 {% endtab %}
 {% endtabs %}
@@ -350,12 +360,12 @@ Checks if a layer does exist in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| exist?  | True or False | 
+| exist  | True or False | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-exist?  = is_layer(layer_name)
+exist  = is_layer(layer_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -376,12 +386,12 @@ Counts the number of objects in a layer
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | number of objects | 
+| count  | The number of objects | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = count_layer_objects(layer_name)
+count  = count_layer_objects(layer_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -402,12 +412,12 @@ Counts the number of ComponentInstances in a layer
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | number of ComponentInstances | 
+| count  | The number of ComponentInstances | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = count_layer_instances(layer_name)
+count  = count_layer_instances(layer_name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -426,12 +436,12 @@ Retrieves an array with the ComponentDefinition names in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| workplane_array  | An array with the ComponentDefinition names | 
+| definitions  | An array with the ComponentDefinition names | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-workplane_array  = get_component_definitions_list()
+definitions  = get_component_definitions_list()
 ```
 {% endtab %}
 {% endtabs %}
@@ -446,18 +456,18 @@ Checks if a ComponentDefinition does exist in the model
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
-| layer_name  | The name of the ComponentDefinition | TRUE | 
+| name  | The name of the ComponentDefinition | TRUE | 
 
 ### Returns
 
 | **Return** | **Description** |
 | --- | --- |
-| exist?  | True or False | 
+| exist  | True or False | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-exist?  = is_component_definition(layer_name)
+exist  = is_component_definition(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -472,18 +482,18 @@ Adds a Component Definition to the model
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
-| layer_name  | The name of the ComponentDefinition | TRUE | 
+| name  | The name of the ComponentDefinition | TRUE | 
 
 ### Returns
 
 | **Return** | **Description** |
 | --- | --- |
-| exist?  | True or False | 
+| a_component  | The name of the component definition | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-exist?  = component(layer_name)
+a_component  = component(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -504,12 +514,12 @@ Counts the number of objects in a ComponentDefinition
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | number of objects | 
+| count  | The number of objects | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = count_component_definition_objects(name)
+count  = count_component_definition_objects(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -530,12 +540,12 @@ Counts the number of ComponentInstances in a ComponentDefinition
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | number of ComponentInstances | 
+| count  | The number of ComponentInstances | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = count_component_definition_instances(name)
+count  = count_component_definition_instances(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -554,12 +564,12 @@ Retrieves a table with the location of the model, containing: latitude, longitud
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the location data | 
+| location  | A table with the location data | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = get_location_data()
+location  = get_location_data()
 ```
 {% endtab %}
 {% endtabs %}
@@ -578,12 +588,12 @@ Retrieves a list of all the material names in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | list with all the names of the materials | 
+| materials  | A list with all the names of the materials | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = get_materials_list()
+materials  = get_materials_list()
 ```
 {% endtab %}
 {% endtabs %}
@@ -604,12 +614,12 @@ Checks if a material exists in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | list with all the names of the materials | 
+| is_material  | A list with all the names of the materials | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = is_material(name)
+is_material  = is_material(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -630,12 +640,12 @@ Gets the class of a certain material
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | list with all the names of the materials | 
+| mat_class  | A list with all the names of the materials | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = get_material_class(name)
+mat_class  = get_material_class(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -656,12 +666,12 @@ Checks if an object exists in the model
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | list with all the names of the materials | 
+| is_object  | Is it? | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = is_object(name)
+is_object  = is_object(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -682,12 +692,12 @@ Gets the class of a certain object
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | list with all the names of the materials | 
+| obj_class  | A list with all the names of the materials | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = get_object_class(name)
+obj_class  = get_object_class(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -708,12 +718,12 @@ Adds a new Layer object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the created layer | 
+| layer  | The name of the created layer | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = layer(name)
+layer  = layer(name)
 ```
 {% endtab %}
 {% endtabs %}
@@ -734,12 +744,12 @@ Adds a new Bubble object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_bubble  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = bubble(data)
+a_bubble  = bubble(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -760,12 +770,12 @@ Adds a new Cone object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_cone  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = cone(data)
+a_cone  = cone(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -786,12 +796,12 @@ Adds a new Cup object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_cup  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = cup(data)
+a_cup  = cup(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -812,12 +822,12 @@ Adds a new Cylinder object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_cylinder  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = cylinder(data)
+a_cylinder  = cylinder(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -838,12 +848,12 @@ Adds a new Polygon object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_polygon  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = polygon(data)
+a_polygon  = polygon(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -864,12 +874,12 @@ Adds a new Ring object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_ring  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = ring(data)
+a_ring  = ring(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -890,12 +900,12 @@ Adds a new Source object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_source  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = source(data)
+a_source  = source(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -916,12 +926,12 @@ Adds a new Sphere object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_sphere  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = sphere(data)
+a_sphere  = sphere(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -942,12 +952,12 @@ Adds a new Tube object to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| A  | table with the object information at time of creation | 
+| a_tube  | A table with the object information at time of creation | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-A  = tube(data)
+a_tube  = tube(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -968,12 +978,12 @@ Adds a new Dielectric material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_dielectric  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = dielectric(data)
+a_dielectric  = dielectric(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -994,12 +1004,12 @@ Adds a new Glass material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_glass  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = glass(data)
+a_glass  = glass(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1020,12 +1030,12 @@ Adds a new Glow material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_glow  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = glow(data)
+a_glow  = glow(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1046,12 +1056,12 @@ Adds a new Interface material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| an_interface  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = interface(data)
+an_interface  = interface(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1072,12 +1082,12 @@ Adds a new Light material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_light  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = light(data)
+a_light  = light(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1098,12 +1108,12 @@ Adds a new Metal material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_metal  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = metal(data)
+a_metal  = metal(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1124,12 +1134,12 @@ Adds a new Plastic material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_plastic  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = plastic(data)
+a_plastic  = plastic(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1150,12 +1160,12 @@ Adds a new Spotlight material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_spotlight  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = spotlight(data)
+a_spotlight  = spotlight(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1176,12 +1186,12 @@ Adds a new Trans material to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the material | 
+| a_trans  | The name of the material | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = trans(data)
+a_trans  = trans(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1202,12 +1212,12 @@ Adds a new View to the EmpModel
 
 | **Return** | **Description** |
 | --- | --- |
-| The  | name of the view | 
+| view  | The name of the view | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-The  = view(data)
+view  = view(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1228,12 +1238,12 @@ Returns a list of the views' names
 
 | **Return** | **Description** |
 | --- | --- |
-| An  | array with the names of the views in the model | 
+| views  | An array with the names of the views in the model | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-An  = get_views_list(data)
+views  = get_views_list(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1254,12 +1264,12 @@ Returns a list of the views' names
 
 | **Return** | **Description** |
 | --- | --- |
-| An  | array with the names of the views in the model | 
+| is_a_view  | Does the view exist in the model? | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-An  = is_view(data)
+is_a_view  = is_view(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1278,14 +1288,12 @@ Returns a list of the views' names
 
 ### Returns
 
-| **Return** | **Description** |
-| --- | --- |
-| An  | array with the names of the views in the model | 
+*This function returns nothing*
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-An  = box(data)
+box(data)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1313,6 +1321,9 @@ instance(data)
 ```
 {% endtab %}
 {% endtabs %}
+
+
+# SET-OPTIONS FUNCTIONS
 
 
 ## ray_trace_options
@@ -1361,6 +1372,9 @@ print_ray_trace_options(file)
 ```
 {% endtab %}
 {% endtabs %}
+
+
+# EXPORT TO RADIANCE
 
 
 ## write_scene_file
@@ -1636,6 +1650,9 @@ write_workplane(task_name, options)
 ```
 {% endtab %}
 {% endtabs %}
+
+
+# RAY-TRACING
 
 
 ## workplane_illuminance
