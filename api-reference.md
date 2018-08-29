@@ -9,9 +9,11 @@ Solves the task manager
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -29,9 +31,11 @@ Prints the current task flow to the standard output
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -49,9 +53,11 @@ Removes all tasks from the Task Manager
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -78,6 +84,7 @@ Prints a warning to the standard error, but continues processing the     script
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -100,6 +107,7 @@ Prints a certain value to the standard output
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -109,7 +117,7 @@ inspect(value)
 {% endtabs %}
 
 
-# GROUNDHOG MODEL DATA
+# EMP MODEL DATA
 
 
 ## get_workplanes_list
@@ -119,6 +127,7 @@ Retrieves an array with the workplanes names in the model
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -141,6 +150,7 @@ Retrieves a table with the workplane information in the model.     That is, name
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -217,6 +227,7 @@ Creates a new Workplane
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -233,6 +244,7 @@ Retrieves an array with the metrics
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -279,6 +291,7 @@ Retrieves an array with the layer names in the model
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -373,6 +386,7 @@ Retrieves an array with the ComponentDefinition names in the model
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -491,6 +505,7 @@ Retrieves a table with the location of the model, containing: latitude, longitud
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -513,6 +528,7 @@ Retrieves a list of all the material names in the model
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 | **Return** | **Description** |
@@ -1165,6 +1181,7 @@ Returns a list of the views' names
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1186,6 +1203,7 @@ Creates a new ComponentInstancex
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1212,6 +1230,7 @@ Modifies the ray-tracing options in the current EmpModel
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1233,6 +1252,7 @@ Prints the current ray-trace opcions. If a file is given, the options     will b
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1260,6 +1280,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1282,6 +1303,7 @@ Adds a task to the task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1306,6 +1328,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1328,6 +1351,7 @@ Adds a task to the task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1352,6 +1376,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1374,6 +1399,7 @@ Adds a task to the task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1398,6 +1424,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1420,6 +1447,7 @@ Adds a task to the task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1444,6 +1472,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1467,6 +1496,7 @@ Adds a task to the task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1489,6 +1519,7 @@ Adds a task to the task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1516,6 +1547,7 @@ Pushes a Calculate Workplane Illuminance task to the     task manager
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1538,6 +1570,7 @@ Pushes a Calculate Workplane Daylight Factor task to the     task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1562,6 +1595,7 @@ Pushes a Calculate Workplane Useful Daylight Illuminance task to the     task ma
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
@@ -1584,6 +1618,7 @@ Pushes a Calculate Workplane Daylight Autonomy task to the     task manager
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1608,10 +1643,59 @@ Pushes a Calculate Workplane Annual Sunlight Exposure task to the     task manag
 
 *This function returns nothing*
 
+
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
 workplane_ase(task_name, options)
+```
+{% endtab %}
+{% endtabs %}
+
+
+## workplane_solar_irradiation
+
+Pushes a Calculate Annual Solar Irradiation task to the     task manager
+
+**Parameters**
+
+| **Name** | **Parameter** | **Required** |
+| --- | --- | --- |
+| task_name  | The name of the task to add | TRUE | 
+| options  | The options given | TRUE | 
+**Returns**
+
+*This function returns nothing*
+
+
+{% tabs %}
+{% tab title='Example 1' %}
+```lua
+workplane_solar_irradiation(task_name, options)
+```
+{% endtab %}
+{% endtabs %}
+
+
+## workplane_daylight_exposure
+
+Pushes a Calculate Annual Daylight Exposure task to the     task manager
+
+**Parameters**
+
+| **Name** | **Parameter** | **Required** |
+| --- | --- | --- |
+| task_name  | The name of the task to add | TRUE | 
+| options  | The options given | TRUE | 
+**Returns**
+
+*This function returns nothing*
+
+
+{% tabs %}
+{% tab title='Example 1' %}
+```lua
+workplane_daylight_exposure(task_name, options)
 ```
 {% endtab %}
 {% endtabs %}
@@ -1630,6 +1714,7 @@ Pushes a generic Workplane metric to the Task Manager. This is an     alternativ
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
@@ -1650,9 +1735,11 @@ Calls RVU program
 **Parameters**
 
 *This function receives no parameters*
+
 **Returns**
 
 *This function returns nothing*
+
 
 {% tabs %}
 {% tab title='Example 1' %}
