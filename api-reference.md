@@ -2,7 +2,7 @@
 # TASK MANAGER
 
 
-## solve_tasks
+## solve_task_manager
 
 Solves the task manager
 
@@ -18,7 +18,7 @@ Solves the task manager
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-solve_tasks()
+solve_task_manager()
 ```
 {% endtab %}
 {% endtabs %}
@@ -73,7 +73,7 @@ purge_tasks()
 
 ## warn
 
-Prints a warning to the standard error, but continues processing the     script
+Prints a warning to the standard error, but continues processing the     script. This function can be used for informing the user of any     possible anomaly or probable misstake.
 
 **Parameters**
 
@@ -96,22 +96,72 @@ warn(message)
 
 ## inspect
 
-Prints a certain value to the standard output
+Transforms a certain value into a detailed string. This works     very simply for strings and numbers. Tables are transformed     into JSON. However, Lua tables are more flexible     than JSON objects... so take care of that.
 
 **Parameters**
 
 | **Name** | **Parameter** | **Required** |
 | --- | --- | --- |
-| value  | The value to print | TRUE | 
+| value  | The value to inspect | TRUE | 
 **Returns**
 
-*This function returns nothing*
-
+| **Return** | **Description** |
+| --- | --- |
+| stringified  | The object in string format | 
 
 {% tabs %}
 {% tab title='Example 1' %}
 ```lua
-inspect(value)
+     r = inspect("car")
+     print( r )
+     --[[
+     this should print:
+     
+     "car"
+     ]]
+```
+{% endtab %}
+{% tab title='Example 2' %}
+```lua
+     r = inspect(1)
+     print( r )
+     --[[
+     this should print:
+     
+     1
+     ]]
+```
+{% endtab %}
+{% tab title='Example 3' %}
+```lua
+     r = inspect({1,2,3})
+     print( r )
+     --[[
+     this should print:
+     [
+       1.0,
+       2.0,
+       3.0
+     ]
+     
+     ]]
+```
+{% endtab %}
+{% tab title='Example 4' %}
+```lua
+     r = inspect({
+     a = 1; b = 2; c = 3;
+     })
+     print( r )
+     --[[
+     this should print:
+     {
+        "a": 1.0,
+        "b": 2.0,
+        "c": 3.0
+     }
+     
+     ]]
 ```
 {% endtab %}
 {% endtabs %}
