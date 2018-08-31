@@ -112,5 +112,61 @@ false
 Have in mind that the `==` operator first compares the type of the variables. So, the expression `12 == "12"` will be false. As of how other operands work when variables are of different type, I do not know.
 {% endhint %}
 
+## Logical operators
 
+Logical operators are useful for evaluating more complex expressions than any relational operation allow. For example, `'A = true if B AND C are both true'`
+
+The relational operators in Lua are `or`, `and` and `not`. These are pretty straightforward, as they are self-explanatory.
+
+```lua
+-- logical_operators.lua
+-- ===========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- define a true and a false statement
+t = true
+f = false
+
+print(t and f) --> false
+print(t or  f) --> true
+print(not t) --> false
+print(not f) --> true
+```
+
+These operators can be nested and combined with relational operators, and used for defining new variables. For instance:
+
+```lua
+-- logical_operators.lua
+-- ===========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- define a true and a false statement
+t = true
+f = false
+
+-- Nested logical operators
+print( (t and f) or not (t or f) ) --> false
+
+-- Combined with relational operators
+print( 1 == 1 or 2 == 1 ) --> true
+print( 1 == 1 and 2 == 1 ) --> false
+
+-- Define a new variable
+a = not ( 1 == 1 and 2 == 1 )
+print(a) --> true
+```
+
+When assigning variables, it is relevant to consider which value do the three operators return. The Lua documentation states that:
+
+* The `not` operator always returns `true` or `false`.
+* The `and` operator returns the first argument if it is equals to `nil` or `false` , otherwise it returns the second argument
+* The `or` operator returns the first argument if this is **different** from `nil` or `false`; otherwise, returns the second argument.
+
+{% hint style="info" %}
+A convenient way of defining default values is the use of expressions such as **`v = some_value or 2`** . This means "assign the value `some_value` to `v`. If `some_value` is `nil` \(i.e. it has not been assigned\), use the default value of `2 ".`
+{% endhint %}
 
