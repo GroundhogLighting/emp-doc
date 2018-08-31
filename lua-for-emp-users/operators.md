@@ -1,7 +1,3 @@
----
-description: Introduction to some Lua operators
----
-
 # Operators
 
 ## Arithmetic operators
