@@ -170,3 +170,7 @@ When assigning variables, it is relevant to consider which value do the three op
 A convenient way of defining default values is the use of expressions such as **`v = some_value or 2`** . This means "assign the value `some_value` to `v`. If `some_value` is `nil` \(i.e. it has not been assigned\), use the default value of `2 ".`
 {% endhint %}
 
+## Other operators
+
+
+
