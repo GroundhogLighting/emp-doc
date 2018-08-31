@@ -218,7 +218,8 @@ auto_solve = false
 array = {1,2,3, "hello"}
 
 -- Lets print this array
-inspect(array) -- 'inspect' is an Emp function, not a Lua one.
+json = inspect(array) -- 'inspect' is an Emp function, not a Lua one.
+print(json)
 
 -- Lets print the last item (Note that arrays start indexing at 1)
 print("The last item in 'array' is "..array[4])
@@ -231,7 +232,8 @@ simple_object = {
     lastname = "Doe"    
 }
 
-inspect(simple_object)
+json = inspect(simple_object)
+print(json)
 
 -- print the data
 print("The lastname of "..simple_object["name"].. " is "..simple_object["lastname"])
@@ -250,6 +252,7 @@ pink_floyd = {
         { name = "Roger", lastname="Waters"},
         { name = "Richard", lastname="Wright"},
         { name = "Syd", lastname="Barret"},
+        {1,2,3,4}
     },
     description = "This is an awesome band!",
     greet = function()
@@ -258,10 +261,12 @@ pink_floyd = {
 }
 
 -- Inspect the object
-inspect(pink_floyd)
+json = inspect(pink_floyd)
+print(json)
 
 -- Call the function embedded in the object
 pink_floyd.greet()
+
 ```
 
 {% hint style="info" %}
