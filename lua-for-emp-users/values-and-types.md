@@ -201,9 +201,13 @@ Did you notice that we concatenated numbers with strings in the last line?
 While the concept of function is present in most programming languages, not all of them consider them to be a type. This allows passing functions as arguments to other function, which can be confusing but useful.
 {% endhint %}
 
-## Table
+## Tables and Arrays
 
-Tables are a very important type in Lua, and are the only way of structuring data. They are associative arrays than behave as dictionaries, objects or other types used in other programming languages. Lets have a look at that using examples.
+Tables are a very important type in Lua, and are the only way of structuring data. They are associative arrays than behave as dictionaries, objects or other types used in other programming languages. 
+
+Tables assign an implicit numeric key to all values provided without one, thus effectively behaving as **Arrays**.
+
+Lets have a look at some examples.
 
 ```lua
 -- table.lua
@@ -222,7 +226,7 @@ json = inspect(array) -- 'inspect' is an Emp function, not a Lua one.
 print(json)
 
 -- Lets print the last item (Note that arrays start indexing at 1)
-print("The last item in 'array' is "..array[4])
+print("The last item in 'array' is ",array[4])
 
 
 -- Lets create a simple object
@@ -236,10 +240,10 @@ json = inspect(simple_object)
 print(json)
 
 -- print the data
-print("The lastname of "..simple_object["name"].. " is "..simple_object["lastname"])
+print("The lastname of ",simple_object["name"], " is ",simple_object["lastname"])
 
 -- Or we can also do
-print("The lastname of "..simple_object.name.. " is "..simple_object.lastname)
+print("The lastname of ",simple_object.name, " is ",simple_object.lastname)
 
 
 
@@ -251,8 +255,7 @@ pink_floyd = {
         { name = "Nick", lastname="Mason"},
         { name = "Roger", lastname="Waters"},
         { name = "Richard", lastname="Wright"},
-        { name = "Syd", lastname="Barret"},
-        {1,2,3,4}
+        { name = "Syd", lastname="Barret"},        
     },
     description = "This is an awesome band!",
     greet = function()
@@ -266,7 +269,6 @@ print(json)
 
 -- Call the function embedded in the object
 pink_floyd.greet()
-
 ```
 
 {% hint style="info" %}

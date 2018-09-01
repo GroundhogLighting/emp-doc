@@ -172,5 +172,61 @@ A convenient way of defining default values is the use of expressions such as **
 
 ## Other operators
 
+There are a few other operators that will be useful for Lua users in Emp. These are the length \(`#`\), and concatenation \(`..`\) operators.
+
+The length operator, as its name states, usually returns the 'length' of the object that it is applied to. It can only be applied to Strings \(returning the number of characters in it\) and Tables \(returning the last numeric key in it\). A consecuence of the behavior of the length operator in Tables is that, when they are created without explicit keys \(i.e. Arrays\), it will return the real length of it.
+
+```lua
+-- other_operators.lua
+-- ===========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- Length operator in String
+print(#"Hello how are you?") --> 18
+
+-- length operator in an array
+array = {"one",2,"tres"}
+print(#array) --> 3
+
+-- length operator in table
+table = { 
+    one = 1,
+    two = 2,
+    three = 3 
+}
+
+print(#table) --> 0 (i.e. this has no numeric keys)
+
+-- Length operator in table with numeric keys
+another_table = { 
+    "one",    
+    two = 2,
+    three = 3 
+}
+
+print(#another_table) --> 1 (i.e. it has one numeric key)
+```
+
+This behavior may look a little strange and, in fact, I do not know the design reasons behind this. However, it is a reasonable behaviour as the length of a table tells you the maximum key you can use for getting a value \(i.e. `another_table[1]` does exist, while `another_table[2]` does not\).
+
+The Concatenate operator puts together two variables of type String or Number into a single String.
+
+```lua
+-- other_operators.lua
+-- ===========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- Concatenate
+first_name = "James"
+last_name = "Bond"
+age = 31
+print("My Name is "..last_name..", "..first_name.." "..last_name)
+print("And I am "..age.." years old")
+```
+
 
 
