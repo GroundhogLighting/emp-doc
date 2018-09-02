@@ -81,12 +81,50 @@ end
 2
 3
 ]]
-
--- This is an infinite loop
-while true do
-    a = a + 1
-end
 ```
+
+The While loop is particularly useful for when you do not know how many iterations will it take for something to happen \(or that is, exactly, what you want to find out\). For instance
+
+```lua
+-- while.lua
+-- ===========
+
+-- Tell Emp that we do not intend to solve anything
+auto_solve = false 
+
+-- Pyramid Scams
+-- ==============
+--[[
+    A friend of yours wants to recruit you for a "business". 
+    The deal is that you need to pay $20 for entering, 
+    and then recruit three new people to the business.
+    Since they have to pay, you will receive your money 
+    back, along with some profit.
+
+    How many "generations" do we need for having
+    100,000,000 people involved?
+
+]]
+
+
+sum = 0 -- The amount of people in the scam
+generations = 0
+population =100000000
+while sum < population do
+    -- Calculate the number of people in this generation
+    this_generation = 3^generations
+
+    -- add it to the the total
+    sum = sum + this_generation
+
+    -- Increase generation
+    generations = generations + 1
+end
+
+print(generations) --> 18
+```
+
+As you can see, with a reasonable number of new people to recruit \(i.e. 3\), the pyramid will have included more than 100 million people in 18 generations! It actually takes 22 to grow larger than the world's population expected stable population of 9 billion. Try printing the `this_generation` variable to see how fast these things scale, and remember that most of the people are at the latest generations and only the few people at the first ones actually make money.
 
 ## Repeat
 
